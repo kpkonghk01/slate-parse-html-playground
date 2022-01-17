@@ -46,3 +46,42 @@ const dom = new JSDOM(html);
 const fragment = deserialize(dom.window.document.body);
 
 console.log(JSON.stringify(fragment, null, 2));
+/**
+[
+  {
+    "type": "ul",
+    "children": [
+      {
+        "type": "li",
+        "children": [
+          {
+            "text": "Hello World"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ul",
+    "children": [
+      {
+        "type": "li",
+        "children": [
+          {
+            "text": "Hello2 World "
+          },
+          {
+            "type": "link",
+            "url": "https://google.com",
+            "children": [
+              {
+                "text": "some link"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+*/
